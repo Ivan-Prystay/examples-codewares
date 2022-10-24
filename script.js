@@ -1,13 +1,20 @@
-// function descendingOrder(n) {
-//   return +n.toString().split("").sort().reverse().join("");
-// }
+//*                       1                   */
 
-// // Examples:
-// // Input: 42145 Output: 54421
-// // Input: 145263 Output: 654321
-// // Input: 123456789 Output: 987654321
+/*
+function descendingOrder(n) {
+  return +n.toString().split("").sort().reverse().join("");
+}
 
-// console.log("descendingOrder(n): ", descendingOrder(1054782512));
+// Examples:
+// Input: 42145 Output: 54421
+// Input: 145263 Output: 654321
+// Input: 123456789 Output: 987654321
+
+console.log("descendingOrder(n): ", descendingOrder(1054782512));
+*/
+
+//*                       2                   */
+
 function howMuchILoveYou(nbPetals) {
   const arr = [
     "I love you",
@@ -17,6 +24,9 @@ function howMuchILoveYou(nbPetals) {
     "madly",
     "not at all",
   ];
+
+  //*     Мій варіант        */
+  /*
   if (nbPetals <= arr.length) {
     return arr[nbPetals - 1];
   } else {
@@ -24,5 +34,10 @@ function howMuchILoveYou(nbPetals) {
       return arr[(nbPetals % arr.length) + 5];
     } else return arr[(nbPetals % arr.length) - 1];
   }
+*/
+  //*             Кращі практики                      */
+
+  return arr[(nbPetals - 1) % arr.length];
 }
-console.log("howMuchILoveYou: ", howMuchILoveYou(273));
+
+console.log("howMuchILoveYou: ", howMuchILoveYou(3));
